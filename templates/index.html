@@ -78,6 +78,9 @@
       display: grid; place-items: center; background: var(--chip); color: var(--accent);
     }
     .icon svg { width: 20px; height: 20px; }
+    .icon.logo { padding: 7px; overflow: hidden; }
+    .icon.logo.full { padding: 0; background: none; }
+    .icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .card strong { display: block; font-weight: 600; }
     .card p { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
     .host { font-size: 0.8rem; color: var(--muted); opacity: .8; overflow-wrap: anywhere; }
@@ -117,7 +120,11 @@
 {%- endmacro %}
 {% macro card(s) -%}
 <a class="card" href="{{ s.url }}">
+  {% if s.logo -%}
+  <span class="icon logo{% if s.logo_full %} full{% endif %}"><img src="/static/logos/{{ s.logo }}" alt="" loading="lazy"></span>
+  {%- else -%}
   <span class="icon">{{ icon(s.icon) }}</span>
+  {%- endif %}
   <span>
     <strong>{{ s.name }}{% if s.lan %}<span class="badge" title="Only reachable on the home network or over Tailscale">LAN</span>{% endif %}</strong>
     <p>{{ s.description }}</p>

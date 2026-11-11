@@ -92,7 +92,6 @@
     }
     .signin { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
     .error { color: #c0392b; font-size: 0.9rem; }
-    footer { color: var(--muted); font-size: 0.8rem; padding: 0 0 32px; }
   </style>
 </head>
 <body>
@@ -164,8 +163,6 @@
   <h2>Sites</h2>
   <div class="grid">{% for s in public %}{{ card(s) }}{% endfor %}</div>
 </main>
-
-<footer><div class="wrap">carrell.us</div></footer>
 
 {% if not user %}
 <script src="https://accounts.google.com/gsi/client" async></script>

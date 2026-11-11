@@ -1,0 +1,4 @@
+.env*
+stack.env
+__pycache__/
+setup_role.sql

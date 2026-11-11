@@ -1,0 +1,21 @@
+{
+  "_comment": "access: \"public\" = shown to everyone; \"meals\" / \"vault\" = checked live against that app's user table; \"admin\" = ADMIN_EMAILS env var. lan: true marks LAN/Tailscale-only hosts.",
+  "sites": [
+    {"name": "Michael Carrell", "url": "https://michael.carrell.us", "description": "Résumé and contact", "icon": "user", "access": "public"},
+    {"name": "Simpli Budget", "url": "https://budget.carrell.us", "description": "Household budgeting", "icon": "wallet", "access": "public"},
+    {"name": "Simpli Score", "url": "https://scoring.carrell.us", "description": "Game score keeping", "icon": "trophy", "access": "public"},
+    {"name": "Game Servers", "url": "https://game-servers.carrell.us", "description": "Palworld and Minecraft status, start and stop", "icon": "gamepad", "access": "public"},
+    {"name": "Photos", "url": "https://photos.carrell.us", "description": "Immich photo library", "icon": "image", "access": "public"},
+
+    {"name": "Meal Planner", "url": "https://meals.carrell.us", "description": "This week's dinners, grocery list and swaps", "icon": "utensils", "access": "meals"},
+    {"name": "Vault", "url": "https://vault.carrell.us", "description": "Vaultwarden password manager", "icon": "lock", "access": "vault"},
+
+    {"name": "Airflow", "url": "https://airflow.carrell.us", "description": "Finance and backup pipelines", "icon": "flow", "access": "admin"},
+    {"name": "Portainer", "url": "https://portainer.carrell.us", "description": "Docker stacks", "icon": "box", "access": "admin"},
+    {"name": "Uptime Kuma", "url": "https://uptime.carrell.us", "description": "Service monitoring", "icon": "pulse", "access": "admin"},
+    {"name": "Home Assistant", "url": "https://home.carrell.us", "description": "Smart home", "icon": "home", "access": "admin", "lan": true},
+    {"name": "Nginx Proxy Manager", "url": "https://proxy.carrell.us", "description": "Reverse proxy and certificates", "icon": "shield", "access": "admin", "lan": true},
+    {"name": "Pi-hole", "url": "http://pihole.carrell.us/admin/", "description": "DNS and ad blocking", "icon": "dns", "access": "admin", "lan": true},
+    {"name": "ESPHome", "url": "http://esphome.carrell.us", "description": "ESP device firmware", "icon": "chip", "access": "admin", "lan": true}
+  ]
+}

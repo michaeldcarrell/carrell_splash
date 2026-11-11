@@ -1,4 +1,4 @@
-# dashboard
+# carrell_splash
 
 The landing page at `https://carrell.us`: a card for every public site, and,
 after Google sign-in, the private apps the signed-in person can use.

@@ -15,7 +15,7 @@ from flask import Flask, abort, jsonify, redirect, render_template, request, ses
 from google.auth.transport import requests as google_requests
 from google.oauth2 import id_token
 
-log = logging.getLogger("dashboard")
+log = logging.getLogger("carrell_splash")
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)

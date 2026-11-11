@@ -1,9 +1,9 @@
-name: dashboard
+name: carrell_splash
 
 services:
-  dashboard:
+  carrell_splash:
     build: .
-    container_name: dashboard
+    container_name: carrell_splash
     restart: unless-stopped
     # Deployed as a git-backed Portainer stack: Portainer writes the stack's
     # environment variables to stack.env in its own checkout of this repo.
@@ -12,7 +12,7 @@ services:
     volumes:
       # Absolute path: Portainer runs compose from its own checkout. Editing
       # this file changes the site list immediately, no rebuild needed.
-      - /home/michael/apps/dashboard/sites.json:/app/sites.json:ro
+      - /home/michael/apps/carrell_splash/sites.json:/app/sites.json:ro
     ports:
       - '8008:8000'
     networks:
